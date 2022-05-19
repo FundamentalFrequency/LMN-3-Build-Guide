@@ -1,13 +1,30 @@
 # LMN-3-Build-Guide
 
 ## Rasbperry Pi Setup
-The steps below assume you have a working Raspberry Pi 4 (running Bullseye) you can log into and use, and that the username for the account is pi. If your username is different, please make sure and make the correct subsitutions. You will also need a network connection for some portions of the setup process. Commands that look like this:
+The steps below assume you have a working Raspberry Pi 4 (running Bullseye) you can log into and use, and that the username for the account is pi. If your username is different, please make sure and make the correct subsitutions. It's also recommended you login to the pi via SSH, assuming you enabled it and filled in the network information when using the [Raspberry Pi Imager](https://www.raspberrypi.com/software/). Network connectivity is required to SSH into the Pi and download the LMN-3 DAW. Commands that look like this:
 
 ```
 $ I am a command!
 ```
 
 should be entered into a terminal command window. The `$` should not be included in the commands and just denotes the prompt. 
+
+## Connecting via SSH
+On your host machine, find the IP of your pi: 
+
+```
+$ sudo arp-scan --interface=wlp3s0 --localnet
+```
+Find the item in the list that looks like this:
+```
+10.0.0.146	dc:a6:32:6d:a2:29	Raspberry Pi Trading Ltd
+```
+Then SSH into the pi:
+```
+$ ssh pi@10.0.0.146
+```
+
+Replace `10.0.0.146` with whatever the IP was for your device. Now you should be remotely connected to the Pi, and can execute commands inside on it in your terminal session.
 
 ### Downloading the LMN-3 DAW
 ```
