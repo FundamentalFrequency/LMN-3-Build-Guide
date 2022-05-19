@@ -95,7 +95,7 @@ nano ~/.config/autostart/LMN-3.desktop
 ```
 Add the following text:
 ```
-[Desktop Entry]]
+[Desktop Entry]
 Type=Application
 Name=LMN-3
 Exec=/home/pi/LMN-3
