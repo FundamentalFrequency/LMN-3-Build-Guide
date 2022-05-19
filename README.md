@@ -121,10 +121,12 @@ Add the following line to the very end of the file:
 ```
 dtoverlay=vc4-kms-dpi-hyperpixel4
 ```
-You may need to rotate the screen (you won't be able to know until you get the screen working for the first time.) If so, you can add a rotate expression to that line:
+You may need to rotate the screen (you won't be able to know until you get the screen working for the first time.) If so, you can add a rotate expression param:
 ```
-dtoverlay=vc4-kms-dpi-hyperpixel4,rotate=90
+dtoverlay=vc4-kms-dpi-hyperpixel4
+dtparam=rotate=270,touchscreen-swapped-x-y,touchscreen-inverted-x
 ```
+See the following [issue](https://github.com/pimoroni/hyperpixel4/issues/177) for more information on configuring the Hyperpixel screen. 
 
 Now reboot the system:
 ```
