@@ -56,11 +56,11 @@ $ cp /etc/xdg/openbox/lxde-pi-rc.xml /home/pi/.config/openbox/rc.xml
 ```
 Note the destination filename is rc.xml. 
 
-Next, edit the configuration file (using geany is a bit easier than nano for this)
+Next, edit the configuration file:
 ```
-$ geany /home/pi/.config/openbox/rc.xml
+$ nano /home/pi/.config/openbox/rc.xml
 ```
-Scroll all the way down to the bottom of the file and find the configuration tag for applications (you can search for `</applications>`). We need to add a new  application tag as a child of this applications tag (there may already be a few children too, just add the new one at the end.) This new application tag will undecorate only the LMN-3 application. The tag you need to add looks like this:
+Scroll all the way down to the bottom of the file and find the configuration tag for applications. We need to add a new  application tag as a child of this applications tag (there may already be a few children too, just add the new one at the end.) This new application tag will undecorate only the LMN-3 application. The tag you need to add looks like this:
 ```
 <application name="LMN-3">
   <decor>no</decor>
@@ -71,8 +71,8 @@ The end of your file should end up looking like this when it's all said and done
 ```
 ...
 ...
-    <application name="Some-other-application">
-    </application>
+    		<application name="Some-other-application">
+    		</application>
     
 		<application name="LMN-3">
 			<decor>no</decor>
