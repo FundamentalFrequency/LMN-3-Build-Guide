@@ -9,7 +9,7 @@ $ I am a command!
 
 should be entered into a terminal command window. The `$` should not be included in the commands and just denotes the prompt. 
 
-## Connecting via SSH
+### Connecting via SSH
 On your host machine, find the IP of your pi: 
 
 ```
