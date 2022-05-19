@@ -32,21 +32,11 @@ $ cd ~
 $ wget https://github.com/stonepreston/LMN-3-DAW/releases/download/v0.1.0/LMN-3-arm-linux-gnueabihf.zip
 ```
 
-After downloading, unzip the archive and run the application to make sure it starts:
+After downloading, unzip the archive.
 
 ```
 $ unzip LMN-3-arm-linux-gnueabihf.zip
-$ ./LMN-3
 ```
-Once it starts up, you can close it as we won't need it running for the next steps. 
-
-### Hiding the panel
-
-We want to hide the main menu panel when its not being used. To do that, follow these instructions: 
-
-`right click the menu -> Panel settings -> advanced -> check minimise panel when not in use and set size when minimzed to 0`
-
-If you hover over the menu location it should unhide, and hide again when you move your mouse away from it. 
 
 ### Removing window decorations
 
@@ -120,8 +110,32 @@ Exec=/home/pi/LMN-3
 
 Press ctrl+x to exit, and make sure and save the changes when prompted. 
 
+### Configuring the screen
+
+Open `/boot/config.txt`:
+```
+$ sudo nano /boot/config.txt
+```
+
+Add the following line to the very end of the file:
+```
+dtoverlay=vc4-kms-dpi-hyperpixel4
+```
+You may need to rotate the screen (you won't be able to know until you get the screen working for the first time.) If so, you can add a rotate expression to that line:
+```
+dtoverlay=vc4-kms-dpi-hyperpixel4,rotate=90
+```
+
 Now reboot the system:
 ```
 reboot
 ```
-Once the system restarts, you should see that the application automatically started up and that the window decorations are gone. 
+Once the system restarts, you should see that the application automatically started up and that the window decorations are gone. If the screen is rotated incorrectly, add a rotate line with the correct angle needed to orient it correctly. The top of the screen should be near the side of the Pi with the power and HDMI ports. 
+
+### Hiding the panel
+
+We want to hide the main menu panel when its not being used. There is probably a way to configure this via the command line, but its easy enough to do with a mouse once you have the screen working. To do that, follow these instructions: 
+
+`right click the menu -> Panel settings -> advanced -> check minimise panel when not in use and set size when minimzed to 0`
+
+If you hover over the menu location it should unhide, and hide again when you move your mouse away from it. 
