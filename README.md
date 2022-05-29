@@ -24,6 +24,7 @@ repositories:
 | Raspberry Pi Power Adapter | 15W USB-C                        | 1        | https://www.raspberrypi.com/products/type-c-power-supply/ 
 | Arduino Header Strip                    |                            | 2      | https://www.amazon.com/gp/product/B07PKKY8BX?psc=1                 |
 | LMN-3 PCB            |                            | 1      | https://github.com/stonepreston/LMN-3-ECAD                |
+| LMN-3 Case            |                            | 1      | https://github.com/stonepreston/LMN-3-MCAD                |
 
 Note the links provided are simply the parts I used in my own build. If you can find the part somewhere else feel free to use that. The LMN-3-DAW has been tested on the 4 GB Raspberry Pi 4 only. Additionally, the Hyperpixel 4 screen also comes in a non touch version. The LMN-3-DAW does not rely on any touch capability, but the design of the touch-based Hyperpixel 4 looks nicer than the non-touch version. The non-touch version is a little bit cheaper though if you would like to keep costs down. 
 
