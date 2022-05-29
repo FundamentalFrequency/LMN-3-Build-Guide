@@ -9,6 +9,23 @@ repositories:
 - [LMN-3-Emulator](https://github.com/stonepreston/LMN-3-Emulator)
 - [LMN-3-Keycaps](https://github.com/stonepreston/LMN-3-Keycaps)
 
+## Bill of Materials
+| Description                | Model                            | Quantity | URL                                                                                            |
+|----------------------------|----------------------------------|----------|------------------------------------------------------------------------------------------------|
+| Diode                      | 1N4148                           | 49       | https://www.amazon.com/McIgIcM-1n4148-switching-Standard-Through/dp/B06XB1R2NK                 |
+| Rotary Encoder             | EC11                             | 4        | https://www.amazon.com/WayinTop-Encoder-Potentiometer-Electronics-Projects/dp/B08728K3YB?psc=1 |
+| Switch                     | 5 pin mechanical keyboard switch | 45       |                                                                                                |
+| Joystick                   | COM-09032                        | 1        | https://www.sparkfun.com/products/9032                                                         |
+| Keycaps                    | Any                              | 45       |                                                                                                |
+| Microcontroller            | Teensy 4.1                       | 1        | https://www.pjrc.com/store/teensy41.html                                                       |
+| Raspberry Pi               | Raspberry Pi 4                   | 1        |                                                                                                |
+| Screen                     | Hyperpixel 4                     | 1        | https://www.sparkfun.com/products/15357                                                        |
+| USB to Mini USB Cable      | USB2AUB2RA1M                    | 1        | https://www.amazon.com/StarTech-com-Fiber-Optic-Cable-Multimode/dp/B012S11KV6                        |
+| Raspberry Pi Power Adapter | 15W USB-C                        | 1        | https://www.raspberrypi.com/products/type-c-power-supply/ 
+| Arduino Header Strip                    |                            | 2      | https://www.amazon.com/gp/product/B07PKKY8BX?psc=1                 |
+| LMN-3 PCB            |                            | 1      | https://github.com/stonepreston/LMN-3-ECAD                |
+
+Note the links provided are simply the parts I used in my own build. If you can find the part somewhere else feel free to use that. 
 ## Rasbperry Pi Setup
 The steps below assume you have a working Raspberry Pi 4 (running Bullseye) you can log into and use, and that the username for the account is pi. If your username is different, please make sure and make the correct subsitutions. It's also recommended you login to the pi via SSH, assuming you enabled it and filled in the network information when using the [Raspberry Pi Imager](https://www.raspberrypi.com/software/). Network connectivity is required to SSH into the Pi and download the LMN-3 DAW. Commands that look like this:
 
