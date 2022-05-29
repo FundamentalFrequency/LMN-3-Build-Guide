@@ -1,4 +1,13 @@
 # LMN-3-Build-Guide
+This repository holds the build guide for the LMN-3. It is a part of the larger LMN-3 project, composed of the following
+repositories:
+- [LMN-3-Build-Guide](https://github.com/stonepreston/LMN-3-Build-Guide)
+- [LMN-3-DAW](https://github.com/stonepreston/LMN-3-DAW)
+- [LMN-3-MCAD](https://github.com/stonepreston/LMN-3-MCAD)
+- [LMN-3-ECAD](https://github.com/stonepreston/LMN-3-ECAD)
+- [LMN-3-Firmware](https://github.com/stonepreston/LMN-3-Firmware)
+- [LMN-3-Emulator](https://github.com/stonepreston/LMN-3-Emulator)
+- [LMN-3-Keycaps](https://github.com/stonepreston/LMN-3-Keycaps)
 
 ## Rasbperry Pi Setup
 The steps below assume you have a working Raspberry Pi 4 (running Bullseye) you can log into and use, and that the username for the account is pi. If your username is different, please make sure and make the correct subsitutions. It's also recommended you login to the pi via SSH, assuming you enabled it and filled in the network information when using the [Raspberry Pi Imager](https://www.raspberrypi.com/software/). Network connectivity is required to SSH into the Pi and download the LMN-3 DAW. Commands that look like this:
