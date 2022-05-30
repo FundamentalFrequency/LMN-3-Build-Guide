@@ -66,58 +66,23 @@ After downloading, unzip the archive.
 $ unzip LMN-3-arm-linux-gnueabihf.zip
 ```
 
-### Removing window decorations
+You can run the app to make sure it runs. This will also create the config directory that is needed in the next step:
+```
+$ ./LMN-3
+```
+You should see some information printed to the console. Press `ctrl+c` to quit. 
 
-Since we don't want to see the window decorations (the title bar with maximize, minimize and close buttons) we will need to remove them from the application. The system application that controls how windows are decorated is called the window manager. In Bullseye, this is mutter. I could not figure out how to remove decorations (or really any information on configuring mutter at all), so we will revert back to using openbox as the window manager instead, which should already be installed and available. 
-
-First, we need to enable openbox by editing `/etc/xdg/lxsession/LXDE-pi/desktop.conf`:
+### Hiding the application title bar
+We need to hide the application title bar so that the application title and the buttons for minimise, maximise, and close dont appear. This is accomplished via configuration using the LMN-3 config file. The LMN-3 config directory is created when the application is first run, but we must create the config file ourselves:
 ```
-$ sudo nano /etc/xdg/lxsession/LXDE-pi/desktop.conf
+$ nano ~/.config/LMN-3/config.yaml
 ```
-Change the line that sets the window manager to use openbox instead:
+Add the following text to the file to disable the title bar:
 ```
-window_manager=openbox
+config:
+  show-title-bar: false
 ```
-Press ctrl+x to exit, and make sure and save the changes when prompted. 
-
-Now we need to add a directory for user-level openbox configuration:
-```
-$ mkdir ~/.config/openbox
-```
-
-Copy the system-level configuration file to this new directory:
-```
-$ cp /etc/xdg/openbox/lxde-pi-rc.xml /home/pi/.config/openbox/rc.xml
-```
-Note the destination filename is rc.xml. 
-
-Next, edit the configuration file:
-```
-$ nano /home/pi/.config/openbox/rc.xml
-```
-Scroll all the way down to the bottom of the file and find the configuration tag for applications. We need to add a new  application tag as a child of this applications tag (there may already be a few children too, just add the new one at the end.) This new application tag will undecorate only the LMN-3 application. The tag you need to add looks like this:
-```
-<application name="LMN-3">
-  <decor>no</decor>
-</application>
-```
-
-The end of your file should end up looking like this when it's all said and done:
-```
-...
-...
-    		<application name="Some-other-application">
-    		</application>
-    
-		<application name="LMN-3">
-			<decor>no</decor>
-		</application>
-	</applications>
-</openbox_config>
-```
-Save and close the file. 
-
-That's all that is needed to remove the window decorations. 
+Close the file and save using `ctrl+x`. 
 
 ### Starting the LMN-3 DAW application on startup
 Create an autostart directory:
@@ -133,7 +98,7 @@ Add the following text:
 [Desktop Entry]
 Type=Application
 Name=LMN-3
-Exec=/home/pi/LMN-3
+Exec=sleep 10; /home/pi/LMN-3
 ```
 
 Press ctrl+x to exit, and make sure and save the changes when prompted. 
@@ -145,20 +110,16 @@ Open `/boot/config.txt`:
 $ sudo nano /boot/config.txt
 ```
 
-Add the following line to the very end of the file:
+Add the following lines to the very end of the file:
 ```
 dtoverlay=vc4-kms-dpi-hyperpixel4
-```
-You may need to rotate the screen (you won't be able to know until you get the screen working for the first time.) If so, you can add a rotate expression param:
-```
-dtoverlay=vc4-kms-dpi-hyperpixel4
-dtparam=rotate=270,touchscreen-swapped-x-y,touchscreen-inverted-x
+dtparam=rotate=90,touchscreen-swapped-x-y,touchscreen-inverted-x
 ```
 See the following [issue](https://github.com/pimoroni/hyperpixel4/issues/177) for more information on configuring the Hyperpixel screen. 
 
 Now reboot the system:
 ```
-reboot
+sudo reboot
 ```
 Once the system restarts, you should see that the application automatically started up and that the window decorations are gone. If the screen is rotated incorrectly, add a rotate line with the correct angle needed to orient it correctly. The top of the screen should be near the side of the Pi with the power and HDMI ports. 
 
