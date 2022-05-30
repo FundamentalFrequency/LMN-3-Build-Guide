@@ -57,13 +57,14 @@ Replace `10.0.0.146` with whatever the IP was for your device. Now you should be
 ### Downloading the LMN-3 DAW
 ```
 $ cd ~
-$ wget https://github.com/stonepreston/LMN-3-DAW/releases/download/v0.1.0/LMN-3-arm-linux-gnueabihf.zip
+$ wget https://github.com/stonepreston/LMN-3-DAW/releases/download/v0.1.0/LMN-3-aarch64-linux-gnu.zip
 ```
+The URL used above is for aarch64 application. If you are using a different architecture you can find it [here](https://github.com/stonepreston/LMN-3-DAW/releases/tag/v0.1.0).
 
 After downloading, unzip the archive.
 
 ```
-$ unzip LMN-3-arm-linux-gnueabihf.zip
+$ unzip LMN-3-aarch64-linux-gnu.zip
 ```
 
 You can run the app to make sure it runs. This will also create the config directory that is needed in the next step:
