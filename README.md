@@ -85,6 +85,21 @@ config:
 Close the file and save using `ctrl+x`. 
 
 ### Starting the LMN-3 DAW application on startup
+We need to run the application on startup. We need to add a bit of delay though so things can initialise and will use a bash script to accomplish this. 
+```
+$ nano ~/LMN_start.sh
+```
+Add the following text to the script:
+```
+#!/bin/bash
+sleep 10
+/home/pi/LMN-3
+```
+Make it executable:
+```
+$ chmod +x ~/LMN_start.sh
+```
+
 Create an autostart directory:
 ```
 $ mkdir ~/.config/autostart
@@ -98,7 +113,7 @@ Add the following text:
 [Desktop Entry]
 Type=Application
 Name=LMN-3
-Exec=sleep 10; /home/pi/LMN-3
+Exec=/home/pi/LMN_start.sh
 ```
 
 Press ctrl+x to exit, and make sure and save the changes when prompted. 
