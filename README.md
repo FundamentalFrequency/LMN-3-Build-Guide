@@ -139,10 +139,15 @@ sudo reboot
 ```
 Once the system restarts, you should see that the application automatically started up and that the window decorations are gone. If the screen is rotated incorrectly, add a rotate line with the correct angle needed to orient it correctly. The top of the screen should be near the side of the Pi with the power and HDMI ports. 
 
-### Hiding the panel
+### Hiding the panel and Disabling Screen Blanking
 
 We want to hide the main menu panel when its not being used. There is probably a way to configure this via the command line, but its easy enough to do with a mouse once you have the screen working. To do that, follow these instructions: 
 
 `right click the menu -> Panel settings -> advanced -> check minimise panel when not in use and set size when minimzed to 0`
 
 If you hover over the menu location it should unhide, and hide again when you move your mouse away from it. 
+
+You can disable screen blanking using the UI as well:
+
+`Press the Raspberry Pi start menu -> Raspberry Pi Configuration -> Display -> Disable Screen Blanking`
+
