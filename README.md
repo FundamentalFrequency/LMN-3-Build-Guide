@@ -28,6 +28,9 @@ repositories:
 
 Note the links provided are simply the parts I used in my own build. If you can find the part somewhere else feel free to use that. The LMN-3-DAW has been tested on the 4 GB Raspberry Pi 4 only. Additionally, the Hyperpixel 4 screen also comes in a non touch version. The LMN-3-DAW does not rely on any touch capability, but the design of the touch-based Hyperpixel 4 looks nicer than the non-touch version. The non-touch version is a little bit cheaper though if you would like to keep costs down. 
 
+Please see the [LMN-3-MCAD repository](https://github.com/stonepreston/LMN-3-MCAD) for information on what fasteners are needed, as well as where to find the CAM files for manufacturing the case itself. See the [LMN-3-ECAD](https://github.com/stonepreston/LMN-3-ECAD) repository for information about the PCB and the gerber files for PCB manufacturing.
+
+
 ## Soldering
 
 ## Assembly
