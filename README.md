@@ -16,25 +16,119 @@ repositories:
 | Rotary Encoder             | EC11                             | 4        | https://www.amazon.com/WayinTop-Encoder-Potentiometer-Electronics-Projects/dp/B08728K3YB?psc=1 |
 | Switch                     | 5 pin mechanical keyboard switch | 45       |                                                                                                |
 | Joystick                   | COM-09032                        | 1        | https://www.sparkfun.com/products/9032                                                         |
-| Keycaps                    | Any                              | 45       |                                                                                                |
+| Keycap                    | Any                              | 45       |                                                                                                |
 | Microcontroller            | Teensy 4.1                       | 1        | https://www.pjrc.com/store/teensy41.html                                                       |
 | Raspberry Pi               | Raspberry Pi 4                   | 1        |                                                                                                |
 | Screen                     | Hyperpixel 4                     | 1        | https://www.sparkfun.com/products/15357                                                        |
 | USB to Mini USB Cable      | USB2AUB2RA1M                    | 1        | https://www.amazon.com/StarTech-com-Fiber-Optic-Cable-Multimode/dp/B012S11KV6                        |
 | Raspberry Pi Power Adapter | 15W USB-C                        | 1        | https://www.raspberrypi.com/products/type-c-power-supply/ 
 | Arduino Header Strip                    |                            | 2      | https://www.amazon.com/gp/product/B07PKKY8BX?psc=1                 |
+| Printable Clear Sticker Paper         |                            | 1      | https://www.amazon.com/dp/B087CNQ75R?psc=1         |
+| M2.5x30 Bolt          |                            | 8      |              |
+| M2.5x12 Bolt          |                            | 4      |                 |
+| M2.5 Nut        |                            | 8      |                 |
+| Acrylic Sheet (12 inch x 16 inch x 1/8 inch)        |                            | 4      | https://www.amazon.com/dp/B09NNW15HQ?psc=1                 |
 | LMN-3 PCB            |                            | 1      | https://github.com/stonepreston/LMN-3-ECAD                |
 | LMN-3 Case            |                            | 1      | https://github.com/stonepreston/LMN-3-MCAD                |
 
-Note the links provided are simply the parts I used in my own build. If you can find the part somewhere else feel free to use that. The LMN-3-DAW has been tested on the 4 GB Raspberry Pi 4 only. Additionally, the Hyperpixel 4 screen also comes in a non touch version. The LMN-3-DAW does not rely on any touch capability, but the design of the touch-based Hyperpixel 4 looks nicer than the non-touch version. The non-touch version is a little bit cheaper though if you would like to keep costs down. 
+Note the links provided are simply the parts I used in my own build. If you can find the part somewhere else feel free to use that. The LMN-3-DAW has been tested on the 4 GB Raspberry Pi 4 only. Additionally, the Hyperpixel 4 screen also comes in a non touch version. The LMN-3-DAW does not rely on any touch capability, but the design of the touch-based Hyperpixel 4 looks WAY nicer than the non-touch version. The non-touch version is a little bit cheaper though if you would like to keep costs down.
 
-Please see the [LMN-3-MCAD repository](https://github.com/stonepreston/LMN-3-MCAD) for information on what fasteners are needed, as well as where to find the CAM files for manufacturing the case itself. See the [LMN-3-ECAD](https://github.com/stonepreston/LMN-3-ECAD) repository for information about the PCB and the gerber files for PCB manufacturing.
+
+Please see the [LMN-3-MCAD repository](https://github.com/stonepreston/LMN-3-MCAD) for the CAM files for manufacturing the case itself. See the [LMN-3-ECAD repository](https://github.com/stonepreston/LMN-3-ECAD) for the gerber files for PCB manufacturing. 
+
+The keycaps I used in this build were blank XDA profile keycaps. You can use whichever you like though, although the icons may need adjustment depending on the chosen profile. For the keycap icons please see the [LMN-3-Keycaps repository](https://github.com/stonepreston/LMN-3-Keycaps) where you will find the SVG file to be printed on the sticker paper. Note: I used a laser printer to print the icons onto the sticker paper. 
 
 ## Soldering
+Soldering the board is not very difficult. Just go slow and double check that things are correct before you go about soldering a row of components. Soldering the Teensy to the PCB is the most difficult part, as the pins are small and very close together. 
+
+### Diodes
+Begin by placing the first row of diodes on the board. Ensure you place the diodes in the correct orientation (the silkscreen will guide you). Place the entire row, then flip the board over.
+
+![Row 0 Diodes Placed](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/soldering/diodes_row_0_placed.png)
+
+Once youve got the board flipped over, try and ensure the diodes are flat against the board before you start soldering. Then solder all the leads:
+
+![Row 0 Diodes Soldered](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/soldering/diodes_row_0_soldered.png)
+
+After soldering, you can trim the leads:
+
+![Row 0 Diodes Trimmed](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/soldering/diodes_row_0_trimmed.png)
+
+Repeat this process until all the diodes are soldered to the board:
+
+![Diodes Soldered Back](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/soldering/diodes_soldered_front.png)
+
+### Teensy
+Once you have the diodes soldered, you need to solder the Teensy. If your Teensy did not come with headers soldered on, you will need to do that first:
+
+![Teensy Headers Soldered](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/soldering/teensy_headers_soldered.png)
+
+Then place the Teensy on the board (it might take some finagling to get the pins through). Solder the pins and then trim them as short as you can get them. This is the most difficult part so go slow if you need to. 
+
+![Teensy Soldered](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/soldering/teensy_soldered_trimmed.png)
+
+### Switches 
+Now its time to solder the switches (you should test your switches first with a multimeter to ensure they all work). You will need to place the acrylic witch layer over the top of the PCB first. Then, install the switches on top of the switch layer so that they are snug against the acrylic, with their pins going through the PCB. You may find it easier to place the switches around the corners first. Ensure each switch is seated tightly against the acrylic. 
+
+![Switches Unsoldered Front](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/soldering/switches_placed_not_soldered_front.JPG)
+
+Also ensure all pins are going through the PCB:
+
+![Switches Unsoldered Back](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/soldering/switches_placed_not_soldered_front.JPG)
+
+Once all the switches are placed, you can solder them:
+
+![Switches Unsoldered Back](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/soldering/switches_soldered_back.JPG)
+
+
+### Encoders and Joystick
+The encoders and joystick are easy to solder. I found it easiest to place the encoders, flip the board over, and then let the board rest on the encoders, with a book or something on the bottom to support it while I soldered things in place. You might also try taping the encoders down so they don't move as much. I didnt have much trouble with the joystick moving. 
+
+![Switches Unsoldered Back](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/soldering/encoders_and_thumbstick_soldered.JPG)
+
+Once those are on the soldering is complete. 
 
 ## Assembly
 
-Do not forget to attach the micro USB connector the PCB before assembling the case!
+### Keycaps
+Now is a good time to place the keycaps onto the switches. Try not to force anything, you don't want to crack the acrylic. As mentioned above, you can print the keycap icons on clear sticker paper, then cut them out and stick them on. 
+
+### Case
+Starting with the bottom layer, stack all the layers up on top of each other except for the switch layer. Note the two upper layers are a bit smaller on one side. 
+
+![Stacked Layers](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/assembly/stacked_layers.JPG)
+
+Go ahead and connect the microUSB cable to the PCB. 
+
+![Switch Layer with Cable](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/assembly/switchplate_with_cable.JPG)
+
+Then place the switch layer/PCB on the top of the stack:
+
+![Stacked Layers With Switch Layer](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/assembly/stacked_layers_with_switchplate.JPG)
+
+You can then stick 4 of the M2.5x30 bolts through the corner holes:
+
+![First Corner Bolts](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/assembly/first_corner_bolts_placed.JPG)
+
+Tighten the nuts finger tight:
+
+![First Corner Nuts](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/assembly/first_corner_nuts_placed.JPEG)
+
+Repeat this process with the rest of the M2.5x30 bolts and nuts:
+
+![All Bolts Fastened](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/assembly/first_corner_nuts_placed.JPEG)
+
+Connect the USB end of the cable to the pi, routing the cable through. You can route it between the post and the USB stack if you want, but it might strain the cable, so I just brought it around the post. 
+
+![Routing Cable](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/assembly/routing_cable.JPG)
+
+Place the Pi on the bottom layer, and then bolt it to the bottom of the case using the 4 M2.5x12 bolts:
+
+![Bolting Pi](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/assembly/bolting_pi.JPEG)
+
+After that you are all done with assembly, and can move on to setting up the Pi.
+
+![Final Assembly](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/assembly/fully_assembled.JPEG)
 
 ## Rasbperry Pi Setup
 The steps below assume you have a working Raspberry Pi 4 (running Bullseye) you can log into and use, and that the username for the account is pi. If your username is different, please make sure and make the correct subsitutions. It's also recommended you login to the pi via SSH, assuming you enabled it and filled in the network information when using the [Raspberry Pi Imager](https://www.raspberrypi.com/software/). Network connectivity is required to SSH into the Pi and download the LMN-3 DAW. You can use the advanced imager settings to configure the Pi to automatically start up and join the network.
