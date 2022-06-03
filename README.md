@@ -11,6 +11,8 @@ repositories:
 - [LMN-3-Emulator](https://github.com/stonepreston/LMN-3-Emulator)
 - [LMN-3-Keycaps](https://github.com/stonepreston/LMN-3-Keycaps)
 
+If you would like to support the project, please consider becoming a [sponsor](https://github.com/sponsors/stonepreston).
+
 ## Bill of Materials
 | Description                | Model                            | Quantity | URL                                                                                            |
 |----------------------------|----------------------------------|----------|------------------------------------------------------------------------------------------------|
