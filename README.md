@@ -109,7 +109,7 @@ Now its time to solder the switches (you should test your switches first with a 
 
 Also ensure all pins are going through the PCB:
 
-![Switches Unsoldered Front](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/soldering/switches_placed_not_soldered_front.JPG)
+![Switches Unsoldered Back](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/soldering/switches_placed_not_soldered_back.JPG)
 
 Once all the switches are placed, you can solder them:
 
