@@ -1,4 +1,6 @@
 # LMN-3-Build-Guide
+![Final Assembly](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/assembly/fully_assembled.JPEG)
+
 This repository holds the build guide for the LMN-3. It is a part of the larger LMN-3 project, composed of the following
 repositories:
 - [LMN-3-Build-Guide](https://github.com/stonepreston/LMN-3-Build-Guide)
@@ -28,15 +30,48 @@ repositories:
 | M2.5x12 Bolt          |                            | 4      |                 |
 | M2.5 Nut        |                            | 8      |                 |
 | Acrylic Sheet (12 inch x 16 inch x 1/8 inch)        |                            | 4      | https://www.amazon.com/dp/B09NNW15HQ?psc=1                 |
+| Rubber Feet            |                            | 4      | https://www.amazon.com/dp/B08GLMTL77                |
 | LMN-3 PCB            |                            | 1      | https://github.com/stonepreston/LMN-3-ECAD                |
 | LMN-3 Case            |                            | 1      | https://github.com/stonepreston/LMN-3-MCAD                |
 
-Note the links provided are simply the parts I used in my own build. If you can find the part somewhere else feel free to use that. The LMN-3-DAW has been tested on the 4 GB Raspberry Pi 4 only. Additionally, the Hyperpixel 4 screen also comes in a non touch version. The LMN-3-DAW does not rely on any touch capability, but the design of the touch-based Hyperpixel 4 looks WAY nicer than the non-touch version. The non-touch version is a little bit cheaper though if you would like to keep costs down.
+Note the links provided are simply the parts I used in my own build. If you can find the part somewhere else feel free to use that. The LMN-3-DAW has been tested on the 4 GB Raspberry Pi 4 only. Additionally, the Hyperpixel 4 screen also comes in a non touch version. The LMN-3-DAW does not rely on any touch capability, but the design of the touch-based Hyperpixel 4 looks WAY nicer than the non-touch version. The non-touch version is a little bit cheaper though if you would like to keep costs down. The rubber feet are also not strictly necessary, but it's a nice touch. 
 
-
-Please see the [LMN-3-MCAD repository](https://github.com/stonepreston/LMN-3-MCAD) for the CAM files for manufacturing the case itself. See the [LMN-3-ECAD repository](https://github.com/stonepreston/LMN-3-ECAD) for the gerber files for PCB manufacturing. 
+Please see the [LMN-3-MCAD repository](https://github.com/stonepreston/LMN-3-MCAD) for the CAM files for manufacturing the case itself. The acrylic sheets are only needed if you are going to laser-cut the case yourself. There are various online laser-cutting shops you can submit the DXF files too and they will cut and ship you the parts. See the [LMN-3-ECAD repository](https://github.com/stonepreston/LMN-3-ECAD) for the gerber files for PCB manufacturing. These gerber files can be submitted to a board house for manufacturing the PCB.  
 
 The keycaps I used in this build were blank XDA profile keycaps. You can use whichever you like though, although the icons may need adjustment depending on the chosen profile. For the keycap icons please see the [LMN-3-Keycaps repository](https://github.com/stonepreston/LMN-3-Keycaps) where you will find the SVG file to be printed on the sticker paper. Note: I used a laser printer to print the icons onto the sticker paper. 
+
+Some of the sections include running commands on your host machine. This is assumed to be a machine running a Debian-based Linux distribution. Commands that look like this:
+
+```
+$ I am a command!
+```
+
+should be entered into a terminal command window. The `$` should not be included in the commands and just denotes the prompt. 
+
+You will need a C/C++ compiler and git installed. You can install them with the following command:
+
+```
+$ sudo apt install build-essential git
+```
+
+You will also need to install [VSCode](https://code.visualstudio.com/). 
+
+## Flashing the Teensy Firmware
+First connect the microUSB cable to the Teensy, and then connect it to your computer. 
+
+Clone the firmware repository to your host machine:
+```
+$ git clone https://github.com/stonepreston/LMN-3-Firmware.git
+```
+
+Open the repository in VSCode (you can use the code command assuming you have added it to your PATH, otherwise just open it via your application menu)
+```
+$ code ./LMN-3-Firmware
+```
+
+You should now have the firmware repository folder open in VSCOde. You will need to install an extension. Press `ctrl+shift+x` to open the extensions menu. Search for `PlatformIO IDE` and install the PlatformIO extension. You will need to restart VSCode after installing it. Once it has restarted, you should see an ant-head icon in the left side-menu now. Click it, and it should bring up a project tasks panel. In the General folder you should see a Build task. Select that task and it should build the code. You will see a success message after it has finished. 
+
+The build task was just a check to make sure you can compile the code (you should be able to with the build-essential package installed). To actually get the compiled code onto the Teensy, select the Upload task. It should attempt to connect to the teensy and automatically upload to it. You should see a small window pop up related to programming the Teeensy. If it cannot program it automatically, you might need to press the small reset button on the Teensy to put it in the correct mode. You should also see a success message when this task finishes as well. 
 
 ## Soldering
 Soldering the board is not very difficult. Just go slow and double check that things are correct before you go about soldering a row of components. Soldering the Teensy to the PCB is the most difficult part, as the pins are small and very close together. 
@@ -86,7 +121,7 @@ The encoders and joystick are easy to solder. I found it easiest to place the en
 
 ![Switches Unsoldered Back](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/soldering/encoders_and_thumbstick_soldered.JPG)
 
-Once those are on the soldering is complete. 
+Once those are on the soldering is complete. If you want to, you can check to make sure everything works at this stage. Plug the Teensy back in your computer. You can download the x86-64 release of the LMN-3-DAW from the [releases page](https://github.com/stonepreston/LMN-3-DAW/releases), extract the files, and then run the LMN-3 application. You should be able to press the switches and turn the encoders, and see changes happening in the application running on screen. 
 
 ## Assembly
 
@@ -98,7 +133,7 @@ Starting with the bottom layer, stack all the layers up on top of each other exc
 
 ![Stacked Layers](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/assembly/stacked_layers.JPG)
 
-Go ahead and connect the microUSB cable to the PCB. 
+Go ahead and connect the microUSB cable to the Teensy. 
 
 ![Switch Layer with Cable](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/assembly/switchplate_with_cable.JPG)
 
@@ -116,7 +151,7 @@ Tighten the nuts finger tight:
 
 Repeat this process with the rest of the M2.5x30 bolts and nuts:
 
-![All Bolts Fastened](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/assembly/first_corner_nuts_placed.JPEG)
+![All Bolts Fastened](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/assembly/all_bolts_fastened.JPEG)
 
 Connect the USB end of the cable to the pi, routing the cable through. You can route it between the post and the USB stack if you want, but it might strain the cable, so I just brought it around the post. 
 
@@ -132,14 +167,6 @@ After that you are all done with assembly, and can move on to setting up the Pi.
 
 ## Rasbperry Pi Setup
 The steps below assume you have a working Raspberry Pi 4 (running Bullseye) you can log into and use, and that the username for the account is pi. If your username is different, please make sure and make the correct subsitutions. It's also recommended you login to the pi via SSH, assuming you enabled it and filled in the network information when using the [Raspberry Pi Imager](https://www.raspberrypi.com/software/). Network connectivity is required to SSH into the Pi and download the LMN-3 DAW. You can use the advanced imager settings to configure the Pi to automatically start up and join the network.
-
-Commands that look like this:
-
-```
-$ I am a command!
-```
-
-should be entered into a terminal command window. The `$` should not be included in the commands and just denotes the prompt. 
 
 ### Connecting via SSH
 On your host machine, find the IP of your pi: 
@@ -243,7 +270,7 @@ sudo reboot
 ```
 Once the system restarts, you should see that the application automatically started up and that the window decorations are gone. If the screen is rotated incorrectly, add a rotate line with the correct angle needed to orient it correctly. The top of the screen should be near the side of the Pi with the power and HDMI ports. 
 
-### Hiding the panel and Disabling Screen Blanking
+### Hiding the Panel and Disabling Screen Blanking
 
 We want to hide the main menu panel when its not being used. There is probably a way to configure this via the command line, but its easy enough to do with a mouse once you have the screen working. To do that, follow these instructions: 
 
@@ -255,3 +282,5 @@ You can disable screen blanking using the UI as well:
 
 `Press the Raspberry Pi start menu -> Raspberry Pi Configuration -> Display -> Disable Screen Blanking`
 
+### Additional Configuration
+At this point things are basically done. You can see the [LMN-3-DAW](https://github.com/stonepreston/LMN-3-DAW) README for information on additional configuration such as adding samples and custom drum kits. 
