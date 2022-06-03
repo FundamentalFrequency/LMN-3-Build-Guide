@@ -69,15 +69,15 @@ Open the repository in VSCode (you can use the code command assuming you have ad
 $ code ./LMN-3-Firmware
 ```
 
-You should now have the firmware repository folder open in VSCOde. You will need to install an extension. Press `ctrl+shift+x` to open the extensions menu. Search for `PlatformIO IDE` and install the PlatformIO extension. You will need to restart VSCode after installing it. Once it has restarted, you should see an ant-head icon in the left side-menu now. Click it, and it should bring up a project tasks panel. In the General folder you should see a Build task. Select that task and it should build the code. You will see a success message after it has finished. 
+You should now have the firmware repository folder open in VSCode. You will need to install an extension. Press `ctrl+shift+x` to open the extensions menu. Search for `PlatformIO IDE` and install the PlatformIO extension. You will need to restart VSCode after installing it. Once it has restarted, you should see an ant-head icon in the left side-menu now. Click it, and it should bring up a project tasks panel. In the General folder you should see a Build task. Select that task and it should build the code. You will see a success message after it has finished. 
 
-The build task was just a check to make sure you can compile the code (you should be able to with the build-essential package installed). To actually get the compiled code onto the Teensy, select the Upload task. It should attempt to connect to the teensy and automatically upload to it. You should see a small window pop up related to programming the Teeensy. If it cannot program it automatically, you might need to press the small reset button on the Teensy to put it in the correct mode. You should also see a success message when this task finishes as well. 
+The build task was just a check to make sure you can compile the code (you should be able to with the build-essential package installed). To actually get the compiled code onto the Teensy, select the Upload task. It should attempt to connect to the teensy and automatically upload to it. You should see a small window pop up related to programming the Teensy. If it cannot program it automatically, you might need to press the small reset button on the Teensy to put it in the correct mode. You should also see a success message when this task finishes as well. 
 
 ## Soldering
 Soldering the board is not very difficult. Just go slow and double check that things are correct before you go about soldering a row of components. Soldering the Teensy to the PCB is the most difficult part, as the pins are small and very close together. 
 
 ### Diodes
-Begin by placing the first row of diodes on the board. Ensure you place the diodes in the correct orientation (the silkscreen will guide you). Place the entire row, then flip the board over.
+Begin by placing the first row of diodes on the board. Ensure you place the diodes in the correct orientation (the black end of the diode should match up with the line on the silkscreen). Place the entire row, then flip the board over.
 
 ![Row 0 Diodes Placed](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/soldering/diodes_row_0_placed.png)
 
@@ -109,24 +109,24 @@ Now its time to solder the switches (you should test your switches first with a 
 
 Also ensure all pins are going through the PCB:
 
-![Switches Unsoldered Back](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/soldering/switches_placed_not_soldered_front.JPG)
+![Switches Unsoldered Front](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/soldering/switches_placed_not_soldered_front.JPG)
 
 Once all the switches are placed, you can solder them:
 
-![Switches Unsoldered Back](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/soldering/switches_soldered_back.JPG)
+![Switches Soldered Back](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/soldering/switches_soldered_back.JPG)
 
 
 ### Encoders and Joystick
 The encoders and joystick are easy to solder. I found it easiest to place the encoders, flip the board over, and then let the board rest on the encoders, with a book or something on the bottom to support it while I soldered things in place. You might also try taping the encoders down so they don't move as much. I didnt have much trouble with the joystick moving. 
 
-![Switches Unsoldered Back](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/soldering/encoders_and_thumbstick_soldered.JPG)
+![Encoders and Thumbstick Soldered](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/soldering/encoders_and_thumbstick_soldered.JPG)
 
 Once those are on the soldering is complete. If you want to, you can check to make sure everything works at this stage. Plug the Teensy back in your computer. You can download the x86-64 release of the LMN-3-DAW from the [releases page](https://github.com/stonepreston/LMN-3-DAW/releases), extract the files, and then run the LMN-3 application. You should be able to press the switches and turn the encoders, and see changes happening in the application running on screen. 
 
 ## Assembly
 
 ### Keycaps
-Now is a good time to place the keycaps onto the switches. Try not to force anything, you don't want to crack the acrylic. As mentioned above, you can print the keycap icons on clear sticker paper, then cut them out and stick them on. 
+Now is a good time to place the keycaps onto the switches. Try not to force anything, you don't want to crack the acrylic. As mentioned above, you can print the keycap icons on clear sticker paper, then cut them out and stick them on. You can find the icons in the [LMN-3-Keycaps repository](https://github.com/stonepreston/LMN-3-Keycaps)
 
 ### Case
 Starting with the bottom layer, stack all the layers up on top of each other except for the switch layer. Note the two upper layers are a bit smaller on one side. 
