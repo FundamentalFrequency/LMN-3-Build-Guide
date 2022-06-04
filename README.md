@@ -73,47 +73,47 @@ Soldering the board is not very difficult. Just go slow and double check that th
 ### Diodes
 Begin by placing the first row of diodes on the board. Ensure you place the diodes in the correct orientation (the black end of the diode should match up with the line on the silkscreen). Place the entire row, then flip the board over.
 
-![Row 0 Diodes Placed](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/soldering/diodes_row_0_placed.png)
+![Row 0 Diodes Placed](images/soldering/diodes_row_0_placed.png)
 
 Once youve got the board flipped over, try and ensure the diodes are flat against the board before you start soldering. Then solder all the leads:
 
-![Row 0 Diodes Soldered](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/soldering/diodes_row_0_soldered.png)
+![Row 0 Diodes Soldered](images/soldering/diodes_row_0_soldered.png)
 
 After soldering, you can trim the leads:
 
-![Row 0 Diodes Trimmed](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/soldering/diodes_row_0_trimmed.png)
+![Row 0 Diodes Trimmed](images/soldering/diodes_row_0_trimmed.png)
 
 Repeat this process until all the diodes are soldered to the board:
 
-![Diodes Soldered Back](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/soldering/diodes_soldered_front.png)
+![Diodes Soldered Back](images/soldering/diodes_soldered_front.png)
 
 ### Teensy
 Once you have the diodes soldered, you need to solder the Teensy. If your Teensy did not come with headers soldered on, you will need to do that first:
 
-![Teensy Headers Soldered](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/soldering/teensy_headers_soldered.png)
+![Teensy Headers Soldered](images/soldering/teensy_headers_soldered.png)
 
 Then place the Teensy on the board (it might take some finagling to get the pins through). Solder the pins and then trim them as short as you can get them. This is the most difficult part so go slow if you need to. 
 
-![Teensy Soldered](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/soldering/teensy_soldered_trimmed.png)
+![Teensy Soldered](images/soldering/teensy_soldered_trimmed.png)
 
 ### Switches 
 Now its time to solder the switches (you should test your switches first with a multimeter to ensure they all work). You will need to place the acrylic witch layer over the top of the PCB first. Then, install the switches on top of the switch layer so that they are snug against the acrylic, with their pins going through the PCB. You may find it easier to place the switches around the corners first. Ensure each switch is seated tightly against the acrylic. 
 
-![Switches Unsoldered Front](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/soldering/switches_placed_not_soldered_front.JPG)
+![Switches Unsoldered Front](images/soldering/switches_placed_not_soldered_front.JPG)
 
 Also ensure all pins are going through the PCB:
 
-![Switches Unsoldered Back](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/soldering/switches_placed_not_soldered_back.JPG)
+![Switches Unsoldered Back](images/soldering/switches_placed_not_soldered_back.JPG)
 
 Once all the switches are placed, you can solder them:
 
-![Switches Soldered Back](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/soldering/switches_soldered_back.JPG)
+![Switches Soldered Back](images/soldering/switches_soldered_back.JPG)
 
 
 ### Encoders and Joystick
 The encoders and joystick are easy to solder. I found it easiest to place the encoders, flip the board over, and then let the board rest on the encoders, with a book or something on the bottom to support it while I soldered things in place. You might also try taping the encoders down so they don't move as much. I didnt have much trouble with the joystick moving. 
 
-![Encoders and Thumbstick Soldered](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/soldering/encoders_and_thumbstick_soldered.JPG)
+![Encoders and Thumbstick Soldered](images/soldering/encoders_and_thumbstick_soldered.JPG)
 
 Once those are on the soldering is complete. If you want to, you can check to make sure everything works at this stage. Plug the Teensy back in your computer. You can download the x86-64 release of the LMN-3-DAW from the [releases page](https://github.com/FundamentalFrequency/LMN-3-DAW/releases), extract the files, and then run the LMN-3 application. You should be able to press the switches and turn the encoders, and see changes happening in the application running on screen. 
 
@@ -125,39 +125,39 @@ Now is a good time to place the keycaps onto the switches. Try not to force anyt
 ### Case
 Starting with the bottom layer, stack all the layers up on top of each other except for the switch layer. Note the two upper layers are a bit smaller on one side. 
 
-![Stacked Layers](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/assembly/stacked_layers.JPG)
+![Stacked Layers](images/assembly/stacked_layers.JPG)
 
 Go ahead and connect the microUSB cable to the Teensy. 
 
-![Switch Layer with Cable](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/assembly/switchplate_with_cable.JPG)
+![Switch Layer with Cable](images/assembly/switchplate_with_cable.JPG)
 
 Then place the switch layer/PCB on the top of the stack:
 
-![Stacked Layers With Switch Layer](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/assembly/stacked_layers_with_switchplate.JPG)
+![Stacked Layers With Switch Layer](images/assembly/stacked_layers_with_switchplate.JPG)
 
 You can then stick 4 of the M2.5x30 bolts through the corner holes:
 
-![First Corner Bolts](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/assembly/first_corner_bolts_placed.JPG)
+![First Corner Bolts](images/assembly/first_corner_bolts_placed.JPG)
 
 Tighten the nuts finger tight:
 
-![First Corner Nuts](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/assembly/first_corner_nuts_placed.JPEG)
+![First Corner Nuts](images/assembly/first_corner_nuts_placed.JPEG)
 
 Repeat this process with the rest of the M2.5x30 bolts and nuts:
 
-![All Bolts Fastened](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/assembly/all_bolts_fastened.JPEG)
+![All Bolts Fastened](images/assembly/all_bolts_fastened.JPEG)
 
 Connect the USB end of the cable to the pi, routing the cable through. You can route it between the post and the USB stack if you want, but it might strain the cable, so I just brought it around the post. 
 
-![Routing Cable](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/assembly/routing_cable.JPG)
+![Routing Cable](images/assembly/routing_cable.JPG)
 
 Place the Pi on the bottom layer, and then bolt it to the bottom of the case using the 4 M2.5x12 bolts:
 
-![Bolting Pi](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/assembly/bolting_pi.JPEG)
+![Bolting Pi](images/assembly/bolting_pi.JPEG)
 
 After that you are all done with assembly, and can move on to setting up the Pi.
 
-![Final Assembly](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/assembly/fully_assembled.JPEG)
+![Final Assembly](images/assembly/fully_assembled.JPEG)
 
 ## Rasbperry Pi Setup
 The steps below assume you have a working Raspberry Pi 4 (running Bullseye) you can log into and use, and that the username for the account is pi. If your username is different, please make sure and make the correct subsitutions. It's also recommended you login to the pi via SSH, assuming you enabled it and filled in the network information when using the [Raspberry Pi Imager](https://www.raspberrypi.com/software/). Network connectivity is required to SSH into the Pi and download the LMN-3 DAW. You can use the advanced imager settings to configure the Pi to automatically start up and join the network.
