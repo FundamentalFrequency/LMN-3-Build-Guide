@@ -1,15 +1,7 @@
 # LMN-3-Build-Guide
-![Final Assembly](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/assembly/fully_assembled.JPEG)
+![Final Assembly](images/assembly/fully_assembled.JPEG)
 
-This repository holds the build guide for the LMN-3. It is a part of the larger LMN-3 project, composed of the following
-repositories:
-- [LMN-3-Build-Guide](https://github.com/stonepreston/LMN-3-Build-Guide)
-- [LMN-3-DAW](https://github.com/stonepreston/LMN-3-DAW)
-- [LMN-3-MCAD](https://github.com/stonepreston/LMN-3-MCAD)
-- [LMN-3-ECAD](https://github.com/stonepreston/LMN-3-ECAD)
-- [LMN-3-Firmware](https://github.com/stonepreston/LMN-3-Firmware)
-- [LMN-3-Emulator](https://github.com/stonepreston/LMN-3-Emulator)
-- [LMN-3-Keycaps](https://github.com/stonepreston/LMN-3-Keycaps)
+This repository contains the build guide for the LMN-3.
 
 If you would like to support the project, please consider becoming a [sponsor](https://github.com/sponsors/stonepreston).
 
@@ -33,14 +25,14 @@ If you would like to support the project, please consider becoming a [sponsor](h
 | M2.5 Nut        |                            | 8      |                 |
 | Acrylic Sheet (12 inch x 16 inch x 1/8 inch)        |                            | 4      | https://www.amazon.com/dp/B09NNW15HQ?psc=1                 |
 | Rubber Feet            |                            | 4      | https://www.amazon.com/dp/B08GLMTL77                |
-| LMN-3 PCB            |                            | 1      | https://github.com/stonepreston/LMN-3-ECAD                |
-| LMN-3 Case            |                            | 1      | https://github.com/stonepreston/LMN-3-MCAD                |
+| LMN-3 PCB            |                            | 1      | https://github.com/FundamentalFrequency/LMN-3-ECAD                |
+| LMN-3 Case            |                            | 1      | https://github.com/FundamentalFrequency/LMN-3-MCAD                |
 
 Note the links provided are simply the parts I used in my own build. If you can find the part somewhere else feel free to use that. The LMN-3-DAW has been tested on the 4 GB Raspberry Pi 4 only. Additionally, the Hyperpixel 4 screen also comes in a non touch version. The LMN-3-DAW does not rely on any touch capability, but the design of the touch-based Hyperpixel 4 looks WAY nicer than the non-touch version. The non-touch version is a little bit cheaper if you would like to keep costs down. The rubber feet are also not strictly necessary, but it's a nice touch. 
 
-Please see the [LMN-3-MCAD repository](https://github.com/stonepreston/LMN-3-MCAD) for the CAM files for manufacturing the case itself. The acrylic sheets are only needed if you are going to laser-cut the case yourself. There are various online laser-cutting shops that allow you to submit DXF files and they will cut and ship you the parts. See the [LMN-3-ECAD repository](https://github.com/stonepreston/LMN-3-ECAD) for the gerber files for PCB manufacturing. These gerber files can be submitted to a board house for manufacturing the PCB.  
+Please see the [LMN-3-MCAD repository](https://github.com/FundamentalFrequency/LMN-3-MCAD) for the CAM files for manufacturing the case itself. The acrylic sheets are only needed if you are going to laser-cut the case yourself. There are various online laser-cutting shops that allow you to submit DXF files and they will cut and ship you the parts. See the [LMN-3-ECAD repository](https://github.com/FundamentalFrequency/LMN-3-ECAD) for the gerber files for PCB manufacturing. These gerber files can be submitted to a board house for manufacturing the PCB.  
 
-The keycaps I used in this build were blank XDA profile keycaps. You can use whichever you like, although the icons may need adjustment depending on the chosen profile. For the keycap icons please see the [LMN-3-Keycaps repository](https://github.com/stonepreston/LMN-3-Keycaps) where you will find the SVG file to be printed on the sticker paper. Note: I used a laser printer to print the icons onto the sticker paper. 
+The keycaps I used in this build were blank XDA profile keycaps. You can use whichever you like, although the icons may need adjustment depending on the chosen profile. For the keycap icons please see the [LMN-3-Keycaps repository](https://github.com/FundamentalFrequency/LMN-3-Keycaps) where you will find the SVG file to be printed on the sticker paper. Note: I used a laser printer to print the icons onto the sticker paper. 
 
 Some of the sections include running commands on your host machine. This is assumed to be a machine running a Debian-based Linux distribution. Commands that look like this:
 
@@ -63,7 +55,7 @@ First connect the microUSB cable to the Teensy, and then connect it to your comp
 
 Clone the firmware repository to your host machine:
 ```
-$ git clone https://github.com/stonepreston/LMN-3-Firmware.git
+$ git clone https://github.com/FundamentalFrequency/LMN-3-Firmware.git
 ```
 
 Open the repository in VSCode (you can use the code command assuming you have added it to your PATH, otherwise just open it via your application menu)
@@ -81,91 +73,91 @@ Soldering the board is not very difficult. Just go slow and double check that th
 ### Diodes
 Begin by placing the first row of diodes on the board. Ensure you place the diodes in the correct orientation (the black end of the diode should match up with the line on the silkscreen). Place the entire row, then flip the board over.
 
-![Row 0 Diodes Placed](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/soldering/diodes_row_0_placed.png)
+![Row 0 Diodes Placed](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/soldering/diodes_row_0_placed.png)
 
 Once youve got the board flipped over, try and ensure the diodes are flat against the board before you start soldering. Then solder all the leads:
 
-![Row 0 Diodes Soldered](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/soldering/diodes_row_0_soldered.png)
+![Row 0 Diodes Soldered](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/soldering/diodes_row_0_soldered.png)
 
 After soldering, you can trim the leads:
 
-![Row 0 Diodes Trimmed](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/soldering/diodes_row_0_trimmed.png)
+![Row 0 Diodes Trimmed](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/soldering/diodes_row_0_trimmed.png)
 
 Repeat this process until all the diodes are soldered to the board:
 
-![Diodes Soldered Back](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/soldering/diodes_soldered_front.png)
+![Diodes Soldered Back](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/soldering/diodes_soldered_front.png)
 
 ### Teensy
 Once you have the diodes soldered, you need to solder the Teensy. If your Teensy did not come with headers soldered on, you will need to do that first:
 
-![Teensy Headers Soldered](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/soldering/teensy_headers_soldered.png)
+![Teensy Headers Soldered](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/soldering/teensy_headers_soldered.png)
 
 Then place the Teensy on the board (it might take some finagling to get the pins through). Solder the pins and then trim them as short as you can get them. This is the most difficult part so go slow if you need to. 
 
-![Teensy Soldered](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/soldering/teensy_soldered_trimmed.png)
+![Teensy Soldered](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/soldering/teensy_soldered_trimmed.png)
 
 ### Switches 
 Now its time to solder the switches (you should test your switches first with a multimeter to ensure they all work). You will need to place the acrylic witch layer over the top of the PCB first. Then, install the switches on top of the switch layer so that they are snug against the acrylic, with their pins going through the PCB. You may find it easier to place the switches around the corners first. Ensure each switch is seated tightly against the acrylic. 
 
-![Switches Unsoldered Front](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/soldering/switches_placed_not_soldered_front.JPG)
+![Switches Unsoldered Front](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/soldering/switches_placed_not_soldered_front.JPG)
 
 Also ensure all pins are going through the PCB:
 
-![Switches Unsoldered Back](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/soldering/switches_placed_not_soldered_back.JPG)
+![Switches Unsoldered Back](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/soldering/switches_placed_not_soldered_back.JPG)
 
 Once all the switches are placed, you can solder them:
 
-![Switches Soldered Back](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/soldering/switches_soldered_back.JPG)
+![Switches Soldered Back](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/soldering/switches_soldered_back.JPG)
 
 
 ### Encoders and Joystick
 The encoders and joystick are easy to solder. I found it easiest to place the encoders, flip the board over, and then let the board rest on the encoders, with a book or something on the bottom to support it while I soldered things in place. You might also try taping the encoders down so they don't move as much. I didnt have much trouble with the joystick moving. 
 
-![Encoders and Thumbstick Soldered](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/soldering/encoders_and_thumbstick_soldered.JPG)
+![Encoders and Thumbstick Soldered](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/soldering/encoders_and_thumbstick_soldered.JPG)
 
-Once those are on the soldering is complete. If you want to, you can check to make sure everything works at this stage. Plug the Teensy back in your computer. You can download the x86-64 release of the LMN-3-DAW from the [releases page](https://github.com/stonepreston/LMN-3-DAW/releases), extract the files, and then run the LMN-3 application. You should be able to press the switches and turn the encoders, and see changes happening in the application running on screen. 
+Once those are on the soldering is complete. If you want to, you can check to make sure everything works at this stage. Plug the Teensy back in your computer. You can download the x86-64 release of the LMN-3-DAW from the [releases page](https://github.com/FundamentalFrequency/LMN-3-DAW/releases), extract the files, and then run the LMN-3 application. You should be able to press the switches and turn the encoders, and see changes happening in the application running on screen. 
 
 ## Assembly
 
 ### Keycaps
-Now is a good time to place the keycaps onto the switches. Try not to force anything, you don't want to crack the acrylic. As mentioned above, you can print the keycap icons on clear sticker paper, then cut them out and stick them on. You can find the icons in the [LMN-3-Keycaps repository](https://github.com/stonepreston/LMN-3-Keycaps)
+Now is a good time to place the keycaps onto the switches. Try not to force anything, you don't want to crack the acrylic. As mentioned above, you can print the keycap icons on clear sticker paper, then cut them out and stick them on. You can find the icons in the [LMN-3-Keycaps repository](https://github.com/FundamentalFrequency/LMN-3-Keycaps)
 
 ### Case
 Starting with the bottom layer, stack all the layers up on top of each other except for the switch layer. Note the two upper layers are a bit smaller on one side. 
 
-![Stacked Layers](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/assembly/stacked_layers.JPG)
+![Stacked Layers](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/assembly/stacked_layers.JPG)
 
 Go ahead and connect the microUSB cable to the Teensy. 
 
-![Switch Layer with Cable](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/assembly/switchplate_with_cable.JPG)
+![Switch Layer with Cable](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/assembly/switchplate_with_cable.JPG)
 
 Then place the switch layer/PCB on the top of the stack:
 
-![Stacked Layers With Switch Layer](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/assembly/stacked_layers_with_switchplate.JPG)
+![Stacked Layers With Switch Layer](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/assembly/stacked_layers_with_switchplate.JPG)
 
 You can then stick 4 of the M2.5x30 bolts through the corner holes:
 
-![First Corner Bolts](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/assembly/first_corner_bolts_placed.JPG)
+![First Corner Bolts](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/assembly/first_corner_bolts_placed.JPG)
 
 Tighten the nuts finger tight:
 
-![First Corner Nuts](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/assembly/first_corner_nuts_placed.JPEG)
+![First Corner Nuts](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/assembly/first_corner_nuts_placed.JPEG)
 
 Repeat this process with the rest of the M2.5x30 bolts and nuts:
 
-![All Bolts Fastened](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/assembly/all_bolts_fastened.JPEG)
+![All Bolts Fastened](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/assembly/all_bolts_fastened.JPEG)
 
 Connect the USB end of the cable to the pi, routing the cable through. You can route it between the post and the USB stack if you want, but it might strain the cable, so I just brought it around the post. 
 
-![Routing Cable](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/assembly/routing_cable.JPG)
+![Routing Cable](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/assembly/routing_cable.JPG)
 
 Place the Pi on the bottom layer, and then bolt it to the bottom of the case using the 4 M2.5x12 bolts:
 
-![Bolting Pi](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/assembly/bolting_pi.JPEG)
+![Bolting Pi](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/assembly/bolting_pi.JPEG)
 
 After that you are all done with assembly, and can move on to setting up the Pi.
 
-![Final Assembly](https://github.com/stonepreston/LMN-3-Build-Guide/blob/main/images/assembly/fully_assembled.JPEG)
+![Final Assembly](https://github.com/FundamentalFrequency/LMN-3-Build-Guide/blob/main/images/assembly/fully_assembled.JPEG)
 
 ## Rasbperry Pi Setup
 The steps below assume you have a working Raspberry Pi 4 (running Bullseye) you can log into and use, and that the username for the account is pi. If your username is different, please make sure and make the correct subsitutions. It's also recommended you login to the pi via SSH, assuming you enabled it and filled in the network information when using the [Raspberry Pi Imager](https://www.raspberrypi.com/software/). Network connectivity is required to SSH into the Pi and download the LMN-3 DAW. You can use the advanced imager settings to configure the Pi to automatically start up and join the network.
@@ -190,9 +182,9 @@ Replace `10.0.0.146` with whatever the IP was for your device. Now you should be
 ### Downloading the LMN-3 DAW
 ```
 $ cd ~
-$ wget https://github.com/stonepreston/LMN-3-DAW/releases/download/v0.1.0/LMN-3-aarch64-linux-gnu.zip
+$ wget https://github.com/FundamentalFrequency/LMN-3-DAW/releases/download/v0.1.0/LMN-3-aarch64-linux-gnu.zip
 ```
-The URL used above is for aarch64 application. If you are using a different architecture you can find it [here](https://github.com/stonepreston/LMN-3-DAW/releases/tag/v0.1.0).
+The URL used above is for aarch64 application. If you are using a different architecture you can find it [here](https://github.com/FundamentalFrequency/LMN-3-DAW/releases/tag/v0.1.0).
 
 After downloading, unzip the archive.
 
@@ -285,4 +277,4 @@ You can disable screen blanking using the UI as well:
 `Press the Raspberry Pi start menu -> Raspberry Pi Configuration -> Display -> Disable Screen Blanking`
 
 ### Additional Configuration
-At this point things are basically done. You can see the [LMN-3-DAW](https://github.com/stonepreston/LMN-3-DAW) README for information on additional configuration such as adding samples and custom drum kits. 
+At this point things are basically done. You can see the [LMN-3-DAW](https://github.com/FundamentalFrequency/LMN-3-DAW) README for information on additional configuration such as adding samples and custom drum kits. 
