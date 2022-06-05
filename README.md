@@ -34,7 +34,7 @@ Please see the [LMN-3-MCAD repository](https://github.com/FundamentalFrequency/L
 
 The keycaps I used in this build were blank XDA profile keycaps. You can use whichever you like, although the icons may need adjustment depending on the chosen profile. For the keycap icons please see the [LMN-3-Keycaps repository](https://github.com/FundamentalFrequency/LMN-3-Keycaps) where you will find the SVG file to be printed on the sticker paper. Note: I used a laser printer to print the icons onto the sticker paper. 
 
-Some of the sections include running commands on your host machine. This is assumed to be a machine running a Debian-based Linux distribution. Commands that look like this:
+Some of the sections include running commands on your host machine. This is assumed to be a machine running a Debian-based Linux distribution and that the package manager is apt. Commands that look like this:
 
 ```
 $ I am a command!
