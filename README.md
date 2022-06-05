@@ -168,6 +168,8 @@ On your host machine, find the IP of your pi:
 ```
 $ sudo arp-scan --interface=wlp3s0 --localnet
 ```
+You may need to provide a different interface name. `$ ip link show` will show you your available interfaces. 
+
 Find the item in the list that looks like this:
 ```
 10.0.0.146	dc:a6:32:6d:a2:29	Raspberry Pi Trading Ltd
