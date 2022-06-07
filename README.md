@@ -220,7 +220,7 @@ $ nano ~/LMN_start.sh
 Add the following text to the script:
 ```
 #!/bin/bash
-sleep 10
+sleep 2
 /home/pi/LMN-3
 ```
 Make it executable:
