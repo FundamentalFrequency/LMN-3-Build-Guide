@@ -6,6 +6,7 @@ This repository contains the build guide for the LMN-3.
 If you would like to support the project, please consider becoming a [sponsor](https://github.com/sponsors/stonepreston).
 
 ## Bill of Materials
+
 | Description                | Model                            | Quantity | URL                                                                                            |
 |----------------------------|----------------------------------|----------|------------------------------------------------------------------------------------------------|
 | Diode                      | 1N4148                           | 49       | https://www.amazon.com/McIgIcM-1n4148-switching-Standard-Through/dp/B06XB1R2NK                 |
@@ -28,7 +29,9 @@ If you would like to support the project, please consider becoming a [sponsor](h
 | LMN-3 PCB            |                            | 1      | https://github.com/FundamentalFrequency/LMN-3-ECAD                |
 | LMN-3 Case            |                            | 1      | https://github.com/FundamentalFrequency/LMN-3-MCAD                |
 
-Note the links provided are simply the parts I used in my own build. If you can find the part somewhere else feel free to use that. The LMN-3-DAW has been tested on the 4 GB Raspberry Pi 4 only. Additionally, the Hyperpixel 4 screen also comes in a non touch version. The LMN-3-DAW does not rely on any touch capability, but the design of the touch-based Hyperpixel 4 looks WAY nicer than the non-touch version. The non-touch version is a little bit cheaper if you would like to keep costs down. The rubber feet are also not strictly necessary, but it's a nice touch. 
+Note: In the BOM listed above, the quantity denotes the required number of that part, not necessarily the required number of whatever is linked in the URL. For example, you need 49 Diodes. The product linked is a pack of 100 diodes, so you just need 1 of those packs in order to have 49 diodes. I recommend getting extra diodes, switches, and encoders in case something ends up not working.
+
+The links provided are simply the parts I used in my own build. If you can find the part somewhere else feel free to use that. The LMN-3-DAW has been tested on the 4 GB Raspberry Pi 4 only. Additionally, the Hyperpixel 4 screen also comes in a non touch version. The LMN-3-DAW does not rely on any touch capability, but the design of the touch-based Hyperpixel 4 looks WAY nicer than the non-touch version. The non-touch version is a little bit cheaper if you would like to keep costs down. The rubber feet are also not strictly necessary, but it's a nice touch. 
 
 Please see the [LMN-3-MCAD repository](https://github.com/FundamentalFrequency/LMN-3-MCAD) for the CAM files for manufacturing the case itself. The acrylic sheets are only needed if you are going to laser-cut the case yourself. There are various online laser-cutting shops that allow you to submit DXF files and they will cut and ship you the parts. See the [LMN-3-ECAD repository](https://github.com/FundamentalFrequency/LMN-3-ECAD) for the gerber files for PCB manufacturing. These gerber files can be submitted to a board house for manufacturing the PCB.  
 
