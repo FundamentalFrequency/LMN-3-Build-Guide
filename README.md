@@ -259,7 +259,7 @@ $ sudo nano /boot/config.txt
 Add the following lines to the very end of the file:
 ```
 dtoverlay=vc4-kms-dpi-hyperpixel4
-dtparam=rotate=90,touchscreen-swapped-x-y,touchscreen-inverted-x
+dtparam=rotate=90,touchscreen-swapped-x-y,touchscreen-inverted-y
 ```
 See the following [issue](https://github.com/pimoroni/hyperpixel4/issues/177) for more information on configuring the Hyperpixel screen. 
 
