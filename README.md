@@ -68,6 +68,27 @@ $ code ./LMN-3-Firmware
 
 You should now have the firmware repository folder open in VSCode. You will need to install an extension. Press `ctrl+shift+x` to open the extensions menu. Search for `PlatformIO IDE` and install the PlatformIO extension. You will need to restart VSCode after installing it. Once it has restarted, you should see an ant-head icon in the left side-menu now. Click it, and it should bring up a project tasks panel. In the General folder you should see a Build task. Select that task and it should build the code. You will see a success message after it has finished. 
 
+### Linux udev Rules
+If you're attempting to upload the Teensy firmware from most Linux distributions, the process will fail to correctly communicate with the Teensy. This is because for security purposes, most Linux distributions prevent 2 way communication with random USB devices. In order to allow communication with the Teensy, a `udev` rule will need to be added to your system.
+
+First, create a new rules file.
+```
+$ sudo nano /etc/udev/rules.d/00-teensy.rules
+```
+
+Then, paste the following contents into that file, and then save the file.
+```
+ATTRS{idVendor}=="16c0", ATTRS{idProduct}=="04*", ENV{ID_MM_DEVICE_IGNORE}="1", ENV{ID_MM_PORT_IGNORE}="1"
+ATTRS{idVendor}=="16c0", ATTRS{idProduct}=="04[789a]*", ENV{MTP_NO_PROBE}="1"
+KERNEL=="ttyACM*", ATTRS{idVendor}=="16c0", ATTRS{idProduct}=="04*", MODE:="0666", RUN:="/bin/stty -F /dev/%k raw -echo"
+KERNEL=="hidraw*", ATTRS{idVendor}=="16c0", ATTRS{idProduct}=="04*", MODE:="0666"
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="16c0", ATTRS{idProduct}=="04*", MODE:="0666"
+KERNEL=="hidraw*", ATTRS{idVendor}=="1fc9", ATTRS{idProduct}=="013*", MODE:="0666"
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="1fc9", ATTRS{idProduct}=="013*", MODE:="0666"
+```
+
+If the Teensy was already connected to your PC, make sure you unplug and re-plug the USB cable, and then communication should work as expected.
+
 The build task was just a check to make sure you can compile the code (you should be able to with the build-essential package installed). To actually get the compiled code onto the Teensy, select the Upload task. It should attempt to connect to the teensy and automatically upload to it. You should see a small window pop up related to programming the Teensy. If it cannot program it automatically, you might need to press the small reset button on the Teensy to put it in the correct mode. You should also see a success message when this task finishes as well. 
 
 ## Soldering
