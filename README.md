@@ -212,11 +212,11 @@ $ wget https://github.com/FundamentalFrequency/LMN-3-DAW/releases/download/<desi
 ```
 The URL used above is for the aarch64 application. If you are using a different version you can find it [here](https://github.com/FundamentalFrequency/LMN-3-DAW/releases).
 
-Please replace <desired-version> in the URL above with whatever version you want. 
+##Please replace <desired-version> in the URL above with whatever version you want. 
 
 For example:  
 ```
-https://github.com/FundamentalFrequency/LMN-3-DAW/releases/download/v0.1.1/LMN-3-aarch64-linux-gnu.zip
+$ wget https://github.com/FundamentalFrequency/LMN-3-DAW/releases/download/v0.1.1/LMN-3-aarch64-linux-gnu.zip
 ```
 
 After downloading, unzip the archive.
