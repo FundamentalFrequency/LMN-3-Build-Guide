@@ -217,7 +217,7 @@ For example:
 ```
 $ wget https://github.com/FundamentalFrequency/LMN-3-DAW/releases/download/v0.1.1/LMN-3-aarch64-linux-gnu.zip
 ```
-The URL used above is version 0.1.1 for the aarch64 application. If you are using a different version you can find it [here](https://github.com/FundamentalFrequency/LMN-3-DAW/releases).
+The URL used above is version 0.1.1 for the aarch64 application. You can find releases for all available versions [here](https://github.com/FundamentalFrequency/LMN-3-DAW/releases). Each release contains a zip file for multiple architectures, so please make sure you download the zip file for the architecture you require. 
 
 After downloading, unzip the archive.
 
