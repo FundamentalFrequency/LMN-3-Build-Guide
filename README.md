@@ -206,19 +206,22 @@ $ ssh pi@10.0.0.146
 Replace `10.0.0.146` with whatever the IP was for your device. Now you should be remotely connected to the Pi, and can execute commands inside on it in your terminal session.
 
 ### Downloading the LMN-3 DAW
+## 1
 ```
 $ cd ~
 $ wget https://github.com/FundamentalFrequency/LMN-3-DAW/releases/download/<desired-version>/LMN-3-aarch64-linux-gnu.zip
 ```
 The URL used above is for the aarch64 application. If you are using a different version you can find it [here](https://github.com/FundamentalFrequency/LMN-3-DAW/releases).
 
-##Please replace <desired-version> in the URL above with whatever version you want. 
+# Note
+Please replace <desired-version> in the URL above with whatever version you want. 
 
 For example:  
 ```
 $ wget https://github.com/FundamentalFrequency/LMN-3-DAW/releases/download/v0.1.1/LMN-3-aarch64-linux-gnu.zip
 ```
 
+## 2 
 After downloading, unzip the archive.
 
 ```
