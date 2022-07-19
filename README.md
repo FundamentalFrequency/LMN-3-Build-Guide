@@ -211,7 +211,7 @@ $ cd ~
 $ wget https://github.com/FundamentalFrequency/LMN-3-DAW/releases/download/<desired-version>/LMN-3-aarch64-linux-gnu.zip
 ```
 
-Please replace <desired-version> in the URL above with whatever version you want. 
+Please replace `<desired-version>` in the URL above with whatever version you want. 
 
 For example:  
 ```
