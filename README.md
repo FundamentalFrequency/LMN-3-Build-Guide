@@ -116,6 +116,8 @@ Once you have the diodes soldered, you need to solder the Teensy. If your Teensy
 
 ![Teensy Headers Soldered](images/soldering/teensy_headers_soldered.png)
 
+Note that you only need to solder headers to the outside pins as shown in the photo. The inner pins are not used. 
+
 Then place the Teensy on the board (it might take some finagling to get the pins through). Solder the pins and then trim them as short as you can get them. This is the most difficult part so go slow if you need to. 
 
 ![Teensy Soldered](images/soldering/teensy_soldered_trimmed.png)
