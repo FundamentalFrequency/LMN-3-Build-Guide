@@ -16,7 +16,7 @@ If you would like to support the project, please consider becoming a [sponsor](h
 | Keycap                    | Any                              | 45       |                                                                                                |
 | Microcontroller            | Teensy 4.1                       | 1        | https://www.pjrc.com/store/teensy41.html                                                       |
 | Raspberry Pi               | Raspberry Pi 4                   | 1        |                                                                                                |
-| Screen                     | Hyperpixel 4                     | 1        | https://www.sparkfun.com/products/15357                                                        |
+| Screen                     | Hyperpixel 4                     | 1        | https://shop.pimoroni.com/en-us/products/hyperpixel-4                                                        |
 | USB to Mini USB Cable      | USB2AUB2RA1M                    | 1        | https://www.amazon.com/StarTech-com-Fiber-Optic-Cable-Multimode/dp/B012S11KV6                        |
 | Raspberry Pi Power Adapter | 15W USB-C                        | 1        | https://www.raspberrypi.com/products/type-c-power-supply/ 
 | Arduino Header Strip                    |                            | 2      | https://www.amazon.com/gp/product/B07PKKY8BX?psc=1                 |
